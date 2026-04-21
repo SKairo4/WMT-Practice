@@ -34,7 +34,7 @@ function App() {
     const payload = { name, quantity, price, company };
 
     try {
-      await fetch('http://localhost:4000/api/items', {
+      await fetch('https://item-manager-backend-tt1n.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
