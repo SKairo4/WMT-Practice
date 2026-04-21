@@ -13,7 +13,7 @@ function App() {
   // Function to fetch data from the backend
   const fetchItems = async () => {
     try {
-      const response = await fetch('https://item-manager-backend-tt1n.onrender.com');
+      const response = await fetch('https://item-manager-backend-tt1n.onrender.com/api/items');
       const data = await response.json();
       setItems(data);
     } catch (error) {
@@ -34,7 +34,7 @@ function App() {
     const payload = { name, quantity, price, company };
 
     try {
-      await fetch('https://item-manager-backend-tt1n.onrender.com', {
+      await fetch('https://item-manager-backend-tt1n.onrender.com/api/items', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
