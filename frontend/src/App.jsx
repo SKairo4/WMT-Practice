@@ -13,7 +13,7 @@ function App() {
   // Function to fetch data from the backend
   const fetchItems = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/items');
+      const response = await fetch('https://item-manager-backend-tt1n.onrender.com');
       const data = await response.json();
       setItems(data);
     } catch (error) {
